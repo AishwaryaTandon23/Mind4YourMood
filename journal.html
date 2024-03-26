@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entries</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking the CSS file -->
+</head>
+<body>
+    <h1>Journal Entries</h1>
+    <div id="journalEntriesContainer">
+        <!-- Journal entries will be dynamically added here -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve journal entries from local storage
+            const journalEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
+
+            // Get reference to the journalEntriesContainer
+            const journalEntriesContainer = document.getElementById('journalEntriesContainer');
+
+            // Iterate over each journal entry
+            journalEntries.forEach(entry => {
+                // Create elements for the entry date and text
+                const entryDateElement = document.createElement('h3');
+                entryDateElement.textContent = entry.date;
+
+                const entryTextElement = document.createElement('p');
+                entryTextElement.textContent = entry.entry;
+
+                // Append date and text elements to the journalEntriesContainer
+                journalEntriesContainer.appendChild(entryDateElement);
+                journalEntriesContainer.appendChild(entryTextElement);
+            });
+        });
+    </script>
+</body>
+</html>

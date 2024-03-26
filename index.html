@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking the CSS file -->
+
+    <!-- Include AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Include AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1 class="side-by-side">Mind4YourMood</h1>
+            <div class="banner-right">          
+                <a href="journal.html" id="viewJournalEntriesButton">View My Journal</a>
+            </div>
+        </div>
+    </header>
+
+    <section data-aos="fade-up">
+        <h1 data-aos="fade-up">Scroll down for Awesomeness.</h1>
+    </section>
+    
+    
+
+    <div id="moodTracker" data-aos="fade-up" class="reveal"> <!-- Added class "reveal" for scroll reveal -->
+        <!-- Container for days of the week and journal container -->
+        <div class="clearfix">
+            <div id="daysAndJournalContainer">
+                <div id="daysContainer"></div>
+                <div id="journalContainer">
+                    <h2>Journal Entry</h2>
+                    <input type="date" id="journalDate">
+                    <textarea id="journalText" placeholder="Write your journal entry" rows="36.5" cols="60"></textarea>
+                    <button id="saveJournalButton">Save Journal Entry</button>
+                </div>
+            </div>
+            <button id="reviewButton">Your Week</button>
+        </div>
+    </div>
+
+    <footer id="myFooter">
+        <div class="quote">
+            <blockquote>
+                "Mental Health isn't a battle to be won. It is a journey to continue walking."
+            </blockquote>
+            <cite>- Lindsay Adkinson</cite>
+        </div>
+        <div class="copyright">&copy; Copyright 2024 Mind4Youth</div>
+    </footer>    
+
+    <script src="script.js"></script> <!-- Linking the JavaScript file -->
+</body>
+</html>
